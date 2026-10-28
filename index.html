@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#030717">
+  <meta name="robots" content="noindex,follow">
+  <meta name="description" content="AH Arcade is coming soon. Insert a coin for a peek, then play an 8-bit mini-game.">
+  <title>Coming Soon | AH Arcade</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <canvas class="stars" id="stars" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <main>
+    <section class="attract" id="attract" aria-label="AH Arcade coming soon. Insert coin for a peek." tabindex="0" role="button" aria-describedby="insertCaption">
+      <div class="attract-content">
+        <h1 class="sr-only">COMING SOON</h1>
+        <canvas id="introTitle" class="pixel-heading intro-heading" aria-hidden="true" width="140" height="18"></canvas>
+        <p id="insertCaption" class="attract-prompt">INSERT COIN FOR A PEEK<span class="blink-cursor" aria-hidden="true">_</span></p>
+      </div>
+    </section>
+
+    <section class="reveal" id="reveal" hidden aria-label="AH Arcade preview">
+      <div class="reveal-content">
+        <p class="identity">AH <span>ARCADE</span></p>
+        <h2>THE ARCADE IS LOADING<span class="cursor" aria-hidden="true">_</span></h2>
+        <p class="intro-copy">Retro games. High scores. Achievements.<br class="phone-break"> Your arcade, your style.</p>
+        <div class="runner-head" aria-label="Mini-game scores">
+          <span>ONE MORE RUN</span>
+          <div class="runner-score">SCORE <strong id="score">00000</strong> <span class="sep">·</span> BEST <strong id="best">00000</strong></div>
+        </div>
+        <div class="runner" id="runner">
+          <canvas id="game" width="960" height="338" tabindex="0" role="img" aria-label="8-bit runner mini-game. Press Space or Up to jump, P to pause, R to restart. On mobile tap the game to jump."></canvas>
+          <div class="game-message" id="gameMessage" aria-live="polite">
+            <strong id="gameTitle">PRESS START</strong>
+            <span id="gameSubtitle">SPACE / ↑ / TAP</span>
+          </div>
+        </div>
+        <div class="runner-foot"><span>SPACE / ↑ / TAP <span class="dim">JUMP</span></span><span>P <span class="dim">PAUSE</span></span><span>R <span class="dim">RESTART</span></span><button id="sound" class="sound" aria-label="Mute sound effects" aria-pressed="false" type="button">SFX ON</button></div>
+        <section class="arcade-about" aria-labelledby="aboutTitle">
+          <p class="about-kicker">A NEW ARCADE IS TAKING SHAPE</p>
+          <h3 id="aboutTitle">YOUR NEXT HIGH SCORE STARTS HERE.</h3>
+          <p>AH Arcade is a free-to-play home for retro-inspired browser games, from Pixel Trail and Block Drop to Alien Assault and Road Hopper — with more on the way.</p>
+          <p>Chase the leaderboards, collect achievements and make the Arcade yours with unlockable themes, profile banners, icons and cartridge styles.</p>
+          <p class="about-last">THE CABINETS ARE BEING BUILT. THIS ONE IS YOURS TO PLAY FOR NOW.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
